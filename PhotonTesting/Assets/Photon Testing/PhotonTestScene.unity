@@ -246,27 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66e8475ca742524b81bea09b36a80fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDatas:
-  - name: Player One
-    playerIndex: 0
-    spawnablePlayerPrefab: {fileID: 0}
-    playerCamera: {fileID: 0}
-  - name: Player Two
-    playerIndex: 1
-    spawnablePlayerPrefab: {fileID: 0}
-    playerCamera: {fileID: 0}
-  - name: Player Three
-    playerIndex: 1
-    spawnablePlayerPrefab: {fileID: 0}
-    playerCamera: {fileID: 0}
-  - name: Player Four
-    playerIndex: 1
-    spawnablePlayerPrefab: {fileID: 0}
-    playerCamera: {fileID: 0}
-  - name: Player Five
-    playerIndex: 1
-    spawnablePlayerPrefab: {fileID: 0}
-    playerCamera: {fileID: 0}
+  playerDatas: []
 --- !u!114 &1784728900
 MonoBehaviour:
   m_ObjectHideFlags: 0
