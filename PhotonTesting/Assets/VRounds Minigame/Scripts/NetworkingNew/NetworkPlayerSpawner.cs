@@ -5,6 +5,16 @@ using Photon.Pun;
 
 public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
+    private GameObject player;
+
+    public Transform spawnPoint;
+
+    public void SpawnPlayer()
+    {
+        player = PhotonNetwork.Instantiate("Network Player", spawnPoint.position, Quaternion.identity);
+        player.GetComponent<NetworkPlayerSetUp>().IsLocalPlayer();
+    }
+    /*
     private GameObject spawnablePlayerPrefab;
 
     [System.Serializable]
@@ -51,4 +61,5 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         PhotonNetwork.Destroy(spawnablePlayerPrefab);
         counter--;
     }
+    */
 }
