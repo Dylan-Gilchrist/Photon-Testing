@@ -30,7 +30,16 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        GetComponent<NetworkPlayerSpawner>().SpawnPlayer();
+        GetComponent<NetworkPlayerSpawner>().SpawnPlayer(GetPlayerCount() - 1);
         Debug.Log("Conection and Joined Room Successful.");
     }
+
+    public int GetPlayerCount() 
+    {
+        if (PhotonNetwork.CurrentRoom != null)
+        {
+            return PhotonNetwork.CurrentRoom.PlayerCount;
+        }
+        return 0;
+    }   
 }

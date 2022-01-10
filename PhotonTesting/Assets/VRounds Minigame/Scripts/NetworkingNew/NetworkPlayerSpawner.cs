@@ -7,11 +7,11 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
     private GameObject player;
 
-    public Transform spawnPoint;
+    public List<Transform> spawnPoints = new List<Transform>();
 
-    public void SpawnPlayer()
+    public void SpawnPlayer(int spawnPositionIndex)
     {
-        player = PhotonNetwork.Instantiate("Network Player", spawnPoint.position, Quaternion.identity);
+        player = PhotonNetwork.Instantiate("Network Player", spawnPoints[spawnPositionIndex].position, Quaternion.identity);
         player.GetComponent<NetworkPlayerSetUp>().IsLocalPlayer();
     }
     /*

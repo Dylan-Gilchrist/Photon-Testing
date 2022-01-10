@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9471ec18ef4a8048b982631ec4df5e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.01
+  speed: 0.06
   playerCamera: {fileID: 8824465570412376850}
 --- !u!114 &8533865920045022024
 MonoBehaviour:
